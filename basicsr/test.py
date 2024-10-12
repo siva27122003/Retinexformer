@@ -1,3 +1,4 @@
+%%writefile /content/Retinexformer/test_single_image.py
 import logging
 import torch
 from os import path as osp
@@ -39,8 +40,8 @@ def main():
     logger.info(get_env_info())
     logger.info(dict2str(opt))
 
-    # Load a single PNG image
-    image_path = '/content/Retinexformer/basicsr/data/meta_info/lowtree.jpg'  # Replace with your PNG image path
+    # Load a single image
+    image_path = '/content/Retinexformer/basicsr/data/meta_info/lowtree.jpg'
     img = load_image(image_path)
 
     # Create model
@@ -54,7 +55,7 @@ def main():
     output_img = model.get_current_visuals()['result']  # Assuming 'result' is the output key
 
     # Save the output image
-    save_image(output_img, 'output/result.png')  # Specify the output path
+    save_image(output_img, 'output/result.png')
     logger.info(f"Image saved at 'output/result.png'")
 
 
