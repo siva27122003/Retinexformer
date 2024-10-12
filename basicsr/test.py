@@ -40,7 +40,7 @@ def main():
     logger.info(dict2str(opt))
 
     # Load a single PNG image
-    image_path = 'path/to/your/image.png'  # Replace with your PNG image path
+    image_path = '/content/Retinexformer/basicsr/data/meta_info/lowtree.jpg'  # Replace with your PNG image path
     img = load_image(image_path)
 
     # Create model
